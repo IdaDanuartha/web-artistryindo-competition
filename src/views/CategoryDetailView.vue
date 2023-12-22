@@ -1,23 +1,34 @@
 <script>
+//   Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+//   Import Swiper styles
   import 'swiper/css';
+
   import 'swiper/css/pagination';
-  // import {Swiper, SwiperSlide} from "swiper/vue";
-  // import {Autoplay, Pagination} from "swiper/modules";
+
+//   import required modules
+  import { Autoplay, Pagination } from 'swiper/modules';
+
+//   import Lightgallery from 'lightgallery/vue';
+//   import lgThumbnail from 'lightgallery/plugins/thumbnail';
+//   import lgZoom from 'lightgallery/plugins/zoom';
+
   export default {
-    // components: {
-    //   Swiper,
-    //   SwiperSlide,
-    //   //   Lightgallery
-    // },
-    // data: () => ({
-    //   // plugins: [lgThumbnail, lgZoom],
-    //   isActive: true
-    // }),
-    // setup() {
-    //   return {
-    //     modules: [Autoplay, Pagination],
-    //   };
-    // },
+    components: {
+      Swiper,
+      SwiperSlide,
+    //   Lightgallery
+    },
+    data: () => ({
+        // plugins: [lgThumbnail, lgZoom],
+        isActive: true
+    }),
+    setup() {
+      return {
+        modules: [Autoplay, Pagination],        
+      };
+    },
   };
 </script>
 
@@ -142,43 +153,43 @@
                         },
                         1024: {
                             slidesPerView: 3,
-                            spaceBetween: 30,
+                            spaceBetween: 10,
                         },
                     }"
                   >                    
                     <swiper-slide class="swiper-slide">
                         <a href="/categories-artistry/performing-arts-heritage" class="category-item">
-                            <img src="../assets/images/thumbnail-categories/thumbnail-category-1.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-1.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Performing Arts Heritage</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <a href="/categories-artistry/performing-arts-heritage" class="category-item">
-                            <img src="../assets/images/thumbnail-categories/thumbnail-category-2.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-2.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Musical Arts Heritage</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <a href="/categories-artistry/performing-arts-heritage" class="category-item">
-                            <img src="../assets/images/thumbnail-categories/thumbnail-category-3.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-3.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Traditional Fine Arts</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <a href="/categories-artistry/performing-arts-heritage" class="category-item">
-                            <img src="../assets/images/thumbnail-categories/thumbnail-category-4.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-4.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Indonesian Literature and Folklore</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <a href="/categories-artistry/performing-arts-heritage" class="category-item">
-                            <img src="../assets/images/thumbnail-categories/thumbnail-category-5.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-5.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Traditional Culinary Delights</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <a href="/categories-artistry/performing-arts-heritage" class="category-item">
-                            <img src="../assets/images/thumbnail-categories/thumbnail-category-6.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-6.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Aksara and Literature</h6>
                         </a>
                     </swiper-slide>

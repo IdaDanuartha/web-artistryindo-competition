@@ -1,23 +1,34 @@
 <script>
+//   Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+//   Import Swiper styles
   import 'swiper/css';
+
   import 'swiper/css/pagination';
-  // import {Swiper, SwiperSlide} from "swiper/vue";
-  // import {Autoplay, Pagination} from "swiper/modules";
+
+//   import required modules
+  import { Autoplay, Pagination } from 'swiper/modules';
+
+//   import Lightgallery from 'lightgallery/vue';
+//   import lgThumbnail from 'lightgallery/plugins/thumbnail';
+//   import lgZoom from 'lightgallery/plugins/zoom';
+
   export default {
-    // components: {
-    //   Swiper,
-    //   SwiperSlide,
-    //   //   Lightgallery
-    // },
-    // data: () => ({
-    //   // plugins: [lgThumbnail, lgZoom],
-    //   isActive: true
-    // }),
-    // setup() {
-    //   return {
-    //     modules: [Autoplay, Pagination],
-    //   };
-    // },
+    components: {
+      Swiper,
+      SwiperSlide,
+    //   Lightgallery
+    },
+    data: () => ({
+        // plugins: [lgThumbnail, lgZoom],
+        isActive: true
+    }),
+    setup() {
+      return {
+        modules: [Autoplay, Pagination],        
+      };
+    },
   };
 </script>
 
@@ -55,13 +66,13 @@
             </div>
         </section>
 
-        <section class="testimonial gap-section" id="testimonial">
+        <section class="blog gap-section" id="blog">
             <div class="row align-items-end justify-content-between">
                 <div class="col-lg-6">
-                    <h3 class="title">ArtistryIndo in the Words of Our Community</h3>
+                    <h3 class="title">Exploring Other Blog the Heartbeat of Indonesian Arts</h3>
                 </div>
                 <div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">
-                    <p class="paragraph">Explore the heartfelt expressions of our community in the 'Voices of Appreciation' section. ArtistryIndo takes pride in curating an enriching cultural experience, and here.</p>
+                    <p class="paragraph">Our blog is a curated space where we unfold stories, share insights, and provide a deeper understanding of the diverse artistic tapestry of Indonesia.</p>
                 </div>
             </div>
             <div class="row gap-row">
@@ -69,7 +80,7 @@
                         <swiper 
                         class="position-relative"
                         :slides-per-view="1"
-                        :space-between="10"
+                        :space-between="20"
                         :modules="modules"
                         :loop="true"
                         :autoplay="{
@@ -79,11 +90,11 @@
                         :breakpoints="{
                             768: {
                             slidesPerView: 2,
-                            spaceBetween: 10,
+                            spaceBetween: 20,
                             },
                             1024: {
                             slidesPerView: 4,
-                            spaceBetween: 10,
+                            spaceBetween: 20,
                             },
                         }"
                         > 
