@@ -22,6 +22,7 @@
     },
     data: () => ({
         plugins: [lgThumbnail, lgZoom],
+        isActive: true
     }),
     methods: {
         onInit: () => {
@@ -244,14 +245,30 @@
             </div>
             <div class="col offset-lg-1 offset-xxl-0">
                 <h3 class="title">Discover ArtistryIndo Unveiling the Heartbeat of Indonesian Creativity</h3>
-                <div class="button-wrapper d-flex gap-2">
-                    <button type="button" class="button-reverse-extrasmall button-definition active">Definition</button>
-                    <button type="button" class="button-reverse-extrasmall button-vission">Vission & Mission</button>
-                    <button type="button" class="button-reverse-extrasmall button-history">Histories</button>
-                </div>
-                <div class="paragraph-wrapper d-flex flex-column gap-2">
+                <ul class="nav button-wrapper d-flex gap-2">
+                  <li class="nav-item" role="presentation">
+                    <button data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" class="button-reverse-extrasmall button-definition active">Definition</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true" class="button-reverse-extrasmall button-vission">Vission & Mission</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="true" class="button-reverse-extrasmall button-history">Histories</button>
+                  </li>
+                </ul>
+                <div class="tab-content my-4" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">                    
                     <p class="paragraph paragraph-1">At ArtistryIndo, we define ourselves as more than a platform; we are custodians of Indonesia's artistic legacy. Our mission goes beyond mere representation; we strive to be a dynamic force that showcases, preserves, and innovates the diverse tapestry of Indonesian arts.</p>
-                    <p class="paragraph paragraph-2">Join us in exploring the vibrant stories, traditions, and contemporary expressions that form the very essence of ArtistryIndo.</p>
+                    <p class="paragraph paragraph-2">Join us in exploring the vibrant stories, traditions, and contemporary expressions that form the very essence of ArtistryIndo.</p>                
+                  </div>
+                  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <p class="paragraph paragraph-1">Our vision at ArtistryIndo is to stand as the foremost destination for the global celebration of Indonesian arts. Rooted in this vision, our mission is to preserve and showcase the rich cultural diversity of Indonesia through dynamic, immersive experiences.</p>
+                    <p class="paragraph paragraph-2">We are committed to fostering a deeper appreciation for Indonesian arts, connecting cultures, and providing a platform for artists to thrive.</p>
+                  </div>
+                  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <p class="paragraph paragraph-1">ArtistryIndo has a story that unfolds through the years, starting with our establishment in [year]. From humble beginnings, we have evolved into a cultural hub that bridges tradition and innovation. Our history is a testament to the dedication of our team, the vibrant artists we collaborate with, and the growing community of art enthusiasts who contribute to the flourishing landscape of Indonesian arts.</p>
+                    <p class="paragraph paragraph-2">Explore the milestones that shape ArtistryIndo's journey, as we continue to weave the threads of Indonesia's artistic heritage into the global cultural narrative.</p>
+                  </div>                  
                 </div>
                 <div class="row fact-wrapper">
                     <div class="col-6 col-md-3 d-flex flex-column align-items-center text-center">
