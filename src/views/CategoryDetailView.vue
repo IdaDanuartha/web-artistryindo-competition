@@ -96,13 +96,13 @@
         </div>
     </section>
 
-    <section class="testimonial gap-section" id="testimonial">
+    <section class="category gap-section" id="category">
         <div class="row align-items-end justify-content-between">
             <div class="col-lg-6">
-                <h3 class="title">ArtistryIndo in the Words of Our Community</h3>
+                <h3 class="title">Other Arts from Various Regions on ArtistryIndo</h3>
             </div>
             <div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">
-                <p class="paragraph">Explore the heartfelt expressions of our community in the 'Voices of Appreciation' section. ArtistryIndo takes pride in curating an enriching cultural experience, and here.</p>
+                <p class="paragraph">Welcome to the Regional Arts section of ArtistryIndo, where every corner of the archipelago radiates its unique artistry. Let's collectively savor.</p>
             </div>
         </div>
         <div class="row gap-row">
@@ -110,7 +110,7 @@
                   <swiper 
                     class="position-relative"
                     :slides-per-view="1"
-                    :space-between="20"
+                    :space-between="10"
                     :modules="modules"
                     :loop="true"
                     :autoplay="{
@@ -120,104 +120,49 @@
                     :breakpoints="{
                       768: {
                             slidesPerView: 2,
-                            spaceBetween: 20,
+                            spaceBetween: 10,
                         },
                         1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 20,
+                            slidesPerView: 3,
+                            spaceBetween: 30,
                         },
                     }"
                   >                    
                     <swiper-slide class="swiper-slide">
-                        <div class="card-testimonial">
-                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                            <p class="paragraph">“ArtistryIndo has become my virtual haven for inspiration. As a graphic designer, the diverse palette of Indonesian arts fuels my creativity.”</p>
-                            <div class="profile-wrapper d-flex align-items-center gap-2">
-                                <img src="../assets/images/testimonials/testimonial-1.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                <div class="wrapper">
-                                    <h6 class="username">Sarah Kingston</h6>
-                                    <p class="job">Graphic Designer</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-1.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <h6>Performing Arts Heritage</h6>
+                        </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
-                        <div class="card-testimonial">
-                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                            <p class="paragraph">“ArtistryIndo played a pivotal role in elevating my art career. Being featured here gave my work exposure beyond my expectations.”</p>
-                            <div class="profile-wrapper d-flex align-items-center gap-2">
-                                <img src="../assets/images/testimonials/testimonial-2.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                <div class="wrapper">
-                                    <h6 class="username">James Mitchell</h6>
-                                    <p class="job">Emerging Artist</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-2.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <h6>Musical Arts Heritage</h6>
+                        </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
-                        <div class="card-testimonial">
-                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                            <p class="paragraph">“ArtistryIndo is not just a platform; it's a cultural phenomenon. As a marketing professional, I appreciate how it seamlessly combines.”</p>
-                            <div class="profile-wrapper d-flex align-items-center gap-2">
-                                <img src="../assets/images/testimonials/testimonial-3.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                <div class="wrapper">
-                                    <h6 class="username">Mia Lawson</h6>
-                                    <p class="job">Marketing Manager</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-3.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <h6>Traditional Fine Arts</h6>
+                        </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
-                        <div class="card-testimonial">
-                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                            <p class="paragraph">“ArtistryIndo is a beacon for preserving traditional Indonesian arts. As a cultural preservationist, I've witnessed the platform's impact.”</p>
-                            <div class="profile-wrapper d-flex align-items-center gap-2">
-                                <img src="../assets/images/testimonials/testimonial-4.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                <div class="wrapper">
-                                    <h6 class="username">Alex Harrison</h6>
-                                    <p class="job">Cultural Preservationist</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-4.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <h6>Indonesian Literature and Folklore</h6>
+                        </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
-                        <div class="card-testimonial">
-                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                            <p class="paragraph">“ArtistryIndo has been an invaluable resource for infusing cultural richness into my travel narratives. The content is not just informative.”</p>
-                            <div class="profile-wrapper d-flex align-items-center gap-2">
-                                <img src="../assets/images/testimonials/testimonial-5.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                <div class="wrapper">
-                                    <h6 class="username">Grace Wanderer</h6>
-                                    <p class="job">Travel Blogger</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-5.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <h6>Traditional Culinary Delights</h6>
+                        </a>
                     </swiper-slide>
                     <swiper-slide class="swiper-slide">
-                        <div class="card-testimonial">
-                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                            <p class="paragraph">“As a music enthusiast, ArtistryIndo has broadened my horizons to the enchanting world of Indonesian music and performing arts.”</p>
-                            <div class="profile-wrapper d-flex align-items-center gap-2">
-                                <img src="../assets/images/testimonials/testimonial-6.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                <div class="wrapper">
-                                    <h6 class="username">Jazz Harmony</h6>
-                                    <p class="job">Music Enthusiast</p>
-                                </div>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                    <swiper-slide class="swiper-slide">
-                        <div class="card-testimonial">
-                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                            <p class="paragraph">“ArtistryIndo's seamless integration of technology with cultural exploration is truly commendable. The user-friendly interface and immersive content.”</p>
-                            <div class="profile-wrapper d-flex align-items-center gap-2">
-                                <img src="../assets/images/testimonials/testimonial-7.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                <div class="wrapper">
-                                    <h6 class="username">Tech Explorer</h6>
-                                    <p class="job">Technology Analyst</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                            <img src="../assets/images/thumbnail-categories/thumbnail-category-6.svg'" alt="Thumbnail Category" class="img-fluid w-100">
+                            <h6>Aksara and Literature</h6>
+                        </a>
                     </swiper-slide>
                 </swiper>
             </div>
