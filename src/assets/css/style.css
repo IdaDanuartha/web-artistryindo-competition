@@ -79,6 +79,23 @@ a {
 
 
 /* COMPONENT */
+.modal .err-message {
+  background-color: rgb(var(--primary-color));
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  margin-bottom: -15px;
+}
+
+.err-message {
+  background-color: rgb(var(--primary-color));
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
 .button-primary-small,
 .button-reverse-small {
     padding: 12px 14px;

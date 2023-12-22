@@ -70,100 +70,16 @@
             </div>
         </div>
         <div class="row gap-row">
-            <div class="col-md-6 col-lg-3">
+            <div v-for="item in testimonials" :key="item.id" class="col-md-6 col-lg-3 mt-4">
                 <div class="card-discussion">
                     <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Ethan Turner</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
+                        <h6 class="username">{{ item.username }}</h6>
+                        <!-- <div class="wrapper d-flex align-items-center gap-2">
                             <div class="like-icon"></div>
                             <p class="caption">20</p>
-                        </div>
+                        </div> -->
                     </div>
-                    <p class="message">“Explore the symbolic meanings behind the elaborate costumes worn in the Kecak Dance.”</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-4 mt-md-0">
-                <div class="card-discussion">
-                    <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Ava Thompson</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
-                            <div class="like-icon"></div>
-                            <p class="caption">12</p>
-                        </div>
-                    </div>
-                    <p class="message">“Delve into the influence of tourism on the traditional performances of the Kecak Dance.”</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
-                <div class="card-discussion">
-                    <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Oliver Bennett</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
-                            <div class="like-icon"></div>
-                            <p class="caption">15</p>
-                        </div>
-                    </div>
-                    <p class="message">“Examine the spiritual dimensions of the Kecak Dance. Discuss the trance like states induced by the rhythmic.”</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
-                <div class="card-discussion">
-                    <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Isabella Hayes</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
-                            <div class="like-icon"></div>
-                            <p class="caption">08</p>
-                        </div>
-                    </div>
-                    <p class="message">“Trace the evolution of the Kecak Dance over the years. Explore how contemporary interpretations.”</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-4">
-                <div class="card-discussion">
-                    <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Leo Anderson</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
-                            <div class="like-icon"></div>
-                            <p class="caption">06</p>
-                        </div>
-                    </div>
-                    <p class="message">“Focus on the character of Hanuman in the Kecak Dance. Discuss the significance of Hanuman's role.”</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-4">
-                <div class="card-discussion">
-                    <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Harper Mitchell</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
-                            <div class="like-icon"></div>
-                            <p class="caption">11</p>
-                        </div>
-                    </div>
-                    <p class="message">“Investigate how the Kecak Dance has transcended its gained international recognition.”</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-4">
-                <div class="card-discussion">
-                    <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Owen Foster</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
-                            <div class="like-icon"></div>
-                            <p class="caption">06</p>
-                        </div>
-                    </div>
-                    <p class="message">“Explore how the Kecak Dance serves as a community activity. Discuss its role in fostering cultural”</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-4">
-                <div class="card-discussion">
-                    <div class="wrapper d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="username">Zoe Collins</h6>
-                        <div class="wrapper d-flex align-items-center gap-2">
-                            <div class="like-icon"></div>
-                            <p class="caption">03</p>
-                        </div>
-                    </div>
-                    <p class="message">“Consider the future of the Kecak Dance. Discuss potential innovations, challenges.”</p>
+                    <p class="message">“{{ item.message }}”</p>
                 </div>
             </div>
         </div>
@@ -176,11 +92,14 @@
                 <p class="paragraph">Step into the heart of cultural discourse. Join a vibrant community of cultural enthusiasts, artists, and scholars in exploring the rich tapestry of Indonesian arts.</p>
             </div>
             <div class="col-lg-6">
-                <form class="form">
-                    <input type="text" class="input mb-2" placeholder="Username">
-                    <input type="email" class="input mb-2" placeholder="Email Address">
-                    <textarea class="input mb-3" rows="4" placeholder="Message discussion"></textarea>
-                    <button type="button" class="button-primary">Submit Message</button>
+              <div class="err-message" v-if="errMessage">
+                {{ errMessage }}
+              </div>
+                <form class="form" @submit.prevent="addTestimonial()">
+                    <input type="text" class="input mb-2" :value="user ? user.displayName : user" readonly placeholder="Username">
+                    <input type="email" class="input mb-2" :value="user ? user.email : user" readonly placeholder="Email Address">
+                    <textarea class="input mb-3" rows="4" required v-model="newTestimonial.message" placeholder="Message discussion"></textarea>
+                    <button type="submit" class="button-primary">Submit Message</button>
                 </form>
             </div>
         </div>
@@ -188,7 +107,45 @@
   </main>
 </template>
 
-<script>
+<script setup>
+import { ref, computed, onMounted } from "vue"
+import { useStore } from "vuex"
+
+const store = useStore()
+
+const user = computed(() => store.state.user)
+const testimonials = ref([])
+
+const newTestimonial = ref({
+  message: '',
+})
+
+let errMessage = ref('')
+
+onMounted(async () => {
+  // Get realtime updates
+  await store.dispatch('getTestimonials', testimonials)
+})  
+
+const addTestimonial = async () => {
+  try {
+    if(!user.value) {
+      errMessage.value = 'Please login first!'
+    } else {
+      await store.dispatch('addTestimonial', {
+        message: newTestimonial.value.message,
+        username: user.value.displayName,
+      })
+      newTestimonial.value.message = ''  
+    }  
+  } catch(e) {
+    if(e == 'Error: You have added a testimonial') {
+      errMessage.value = 'You have added a testimonial'
+    } else {
+      errMessage.value = 'Failed to add testimonial'  
+    }
+  }
+}
 </script>
 
 <style>
