@@ -125,6 +125,8 @@ const handleLogin = async () => {
     email.value = ""
     password.value = ""
 
+    location.reload()
+    
   } catch (err) {
     loginMsg.value = "Email or password incorrect"
   }
@@ -142,6 +144,8 @@ const handleSignup = async () => {
     new_username.value = ""
     new_email.value = ""
     new_password.value = ""
+
+    location.reload()
 
   } catch (err) {
     signupMsg.value = "Email already registered"
