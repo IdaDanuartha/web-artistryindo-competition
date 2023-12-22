@@ -56,6 +56,12 @@
 body {
   background-color: rgba(var(--light-color), 1);
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1,
@@ -566,7 +572,7 @@ form.form .input::placeholder {
   background-image: url('../images/icons/arrow-right-light.svg');
 }
 
-.mainpage section.showcase .swiperShowcase .swiper-slide {
+.mainpage section.showcase .swiper-slide {
   border-radius: 6px;
   border: 4px solid rgba(var(--dark-color), 1);
 }

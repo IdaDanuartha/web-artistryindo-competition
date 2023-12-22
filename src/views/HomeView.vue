@@ -42,8 +42,8 @@
                 <h1 class="headline">Discovering Indonesia Through Art: Welcome to ArtistryIndo</h1>
                 <p class="paragraph">Explore the diverse and vibrant world of Indonesian art at ArtistryIndo. From traditional dance to modern installations, we showcase the soulful creativity that defines our nation. Join us on a visual and cultural journey that spans generations.</p>
                 <div class="button-group d-flex gap-2">
-                    <a href="#" class="button-primary">Explore Artistic Now</a>
-                    <a href="#" class="button-reverse">About ArtistryIndo</a>
+                    <a href="#category" class="button-primary">Explore Artistic Now</a>
+                    <a href="/about" class="button-reverse">About ArtistryIndo</a>
                 </div>
             </div>
             <div class="col-lg-5 col-xxl-6 d-none d-lg-flex justify-content-end">
@@ -475,7 +475,7 @@
         </div>
         <div class="row gap-row">
             <div class="col-md-6 col-lg-3">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-1.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">Unraveling the Threads of Indonesia's Cultural Fabric</h6>
                     <p class="card-caption">Explore the rich history, intricate patterns, and modern interpretations of Indonesian batik.</p>
@@ -483,7 +483,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4 mt-md-0">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-2.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">Sculpting Tradition, Wood Carving Across Indonesian Regions</h6>
                     <p class="card-caption">Delve into the world of traditional wood carving in Indonesia. From the symbolic motifs of Bali ...</p>
@@ -491,7 +491,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-3.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">Dance of Legends, Exploring Indonesia's Traditional Dance Forms</h6>
                     <p class="card-caption">Immerse yourself in the elegance and storytelling of Indonesian traditional dance.</p>
@@ -499,7 +499,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-4.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">Modern Mosaics, Contemporary Art Trends in Indonesia</h6>
                     <p class="card-caption">Step into the dynamic world of contemporary Indonesian art. This post highlights emerging ...</p>
@@ -507,7 +507,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-5.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">Culinary Canvas, The Art of Indonesian Cuisine</h6>
                     <p class="card-caption">Explore the artistry of Indonesian cuisine, where flavors, colors, and traditions come together ...</p>
@@ -515,7 +515,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-6.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">A Brush with Tradition: Exploring Indonesian Painting Styles</h6>
                     <p class="card-caption">Uncover the strokes and stories behind Indonesian painting styles. This post delves int ...</p>
@@ -523,7 +523,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-7.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">Crafting Heritage, Indonesian Textile Traditions</h6>
                     <p class="card-caption">Immerse yourself in the intricate world of Indonesian textiles. From the handwoven bea ...</p>
@@ -531,7 +531,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="#" class="card-blog">
+                <a href="/blogs/unraveling-the-threads-of-indonesias-cultural-fabric" class="card-blog">
                     <img src="../assets/images/blogs/blog-8.svg" alt="Blog Image" class="img-fluid w-100">
                     <h6 class="card-title">Beyond Borders, Indonesian Arts and Global Influences</h6>
                     <p class="card-caption">From international collaborations to the fusion of cultural elements, join us in exploring how ...</p>
@@ -541,7 +541,7 @@
         </div>
         <div class="row gap-row">
             <div class="col-12 d-flex justify-content-center">
-                <a href="#" class="button-reverse">More Blog Artistry</a>
+                <a href="/blogs" class="button-reverse">More Blog Artistry</a>
             </div>
         </div>
     </section>
@@ -554,8 +554,8 @@
                 <h1 class="headline">Get Involved with ArtistryIndo Today!</h1>
                 <p class="paragraph">Ready to experience the magic of Indonesian arts up close? ArtistryIndo invites you to get involved and be part of our vibrant community. From engaging with artists to participating in cultural events</p>
                 <div class="button-group d-flex gap-2 m-0">
-                    <a href="#" class="button-primary">Explore Artistic Now</a>
-                    <a href="#" class="button-reverse">About ArtistryIndo</a>
+                    <a href="/categories-artistry" class="button-primary">Explore Artistic Now</a>
+                    <a href="/about" class="button-reverse">About ArtistryIndo</a>
                 </div>
             </div>
         </div>
@@ -649,10 +649,10 @@
                 <div class="col-6 col-md-3 col-lg-2 offset-xl-1">
                     <h6 class="footer-title">Quick Link</h6>
                     <div class="footer-link d-flex flex-column gap-2">
-                        <a href="#" class="link-item">Home</a>
-                        <a href="#" class="link-item">About Us</a>
-                        <a href="#" class="link-item">Category Artistry</a>
-                        <a href="#" class="link-item">Blog</a>
+                        <a href="/" class="link-item">Home</a>
+                        <a href="/about" class="link-item">About Us</a>
+                        <a href="/categories-artistry" class="link-item">Category Artistry</a>
+                        <a href="/blogs" class="link-item">Blog</a>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2">
@@ -676,9 +676,9 @@
                 <div class="col-6 col-md-3 col-lg-2 mt-5 mt-md-0">
                     <h6 class="footer-title">Help & Guide</h6>
                     <div class="footer-link d-flex flex-column gap-2">
-                        <a href="#service" class="link-item">Terms & Conditions</a>
-                        <a href="#service" class="link-item">Privacy Policy</a>
-                        <a href="#service" class="link-item">Contact Us</a>
+                        <a href="" class="link-item">Terms & Conditions</a>
+                        <a href="" class="link-item">Privacy Policy</a>
+                        <a href="" class="link-item">Contact Us</a>
                     </div>
                 </div>
             </div>
