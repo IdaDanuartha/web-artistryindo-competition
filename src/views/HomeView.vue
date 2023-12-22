@@ -5,10 +5,6 @@
   // Import Swiper styles
   import 'swiper/css';
 
-
-
-
-
   // import required modules
   import { Autoplay, Pagination } from 'swiper/modules';
 
@@ -68,6 +64,11 @@
                 class="position-relative"
                 :slides-per-view="1"
                 :space-between="10"
+                :loop=true
+                :autoplay="{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }"
                 :modules="modules"
                 :pagination="{
                   clickable:true
@@ -204,11 +205,14 @@
                     class="position-relative"
                     :slides-per-view="1"
                     :space-between="20"
-                    :modules="modules"
-                    :loop="true"
+                    :loop=true
                     :autoplay="{
                         delay: 5000,
                         disableOnInteraction: false,
+                    }"
+                    :modules="modules"
+                    :pagination="{
+                        clickable:true
                     }"
                     :breakpoints="{
                         1024: {
@@ -355,11 +359,14 @@
                     class="position-relative"
                     :slides-per-view="1"
                     :space-between="20"
-                    :modules="modules"
-                    :loop="true"
+                    :loop=true
                     :autoplay="{
                         delay: 5000,
                         disableOnInteraction: false,
+                    }"
+                    :modules="modules"
+                    :pagination="{
+                        clickable:true
                     }"
                     :breakpoints="{
                         768: {
