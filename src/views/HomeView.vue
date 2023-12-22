@@ -8,16 +8,32 @@
   import 'swiper/css/pagination';
 
   // import required modules
-  import { Pagination } from 'swiper/modules';
+  import { Autoplay, Pagination } from 'swiper/modules';
+
+  import Lightgallery from 'lightgallery/vue';
+  import lgThumbnail from 'lightgallery/plugins/thumbnail';
+  import lgZoom from 'lightgallery/plugins/zoom';
 
   export default {
     components: {
       Swiper,
       SwiperSlide,
+      Lightgallery
+    },
+    data: () => ({
+        plugins: [lgThumbnail, lgZoom],
+    }),
+    methods: {
+        onInit: () => {
+            console.log('lightGallery has been initialized');
+        },
+        onBeforeSlide: () => {
+            console.log('calling before slide');
+        },
     },
     setup() {
       return {
-        modules: [Pagination],
+        modules: [Autoplay, Pagination],        
       };
     },
   };
@@ -187,23 +203,36 @@
         </div>
         <div class="row gap-row">
             <div class="col-12 position-relative">
-                <div class="swiper mySwiper swiperShowcase position-relative">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <iframe height="360" class="w-100" src="https://www.youtube.com/embed/ymIwxGhFP3k?si=RC6gHnKvgdMep6Go" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="swiper-slide">
-                            <iframe height="360" class="w-100" src="https://www.youtube.com/embed/4dh25ciA8Xo?si=Codb8_uxLRkYHOo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="swiper-slide">
-                            <iframe height="360" class="w-100" src="https://www.youtube.com/embed/ORni1WW8T7E?si=AV9srRVAIyDSwzcf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="swiper-slide">
-                            <iframe height="360" class="w-100" src="https://www.youtube.com/embed/KBjc5Aa0IYE?si=6PTF3ldW1cbQmElj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination swiper-pagination-showcase"></div>
+                  <swiper 
+                    class="position-relative"
+                    :slides-per-view="1"
+                    :space-between="20"
+                    :modules="modules"
+                    :loop="true"
+                    :autoplay="{
+                      delay: 5000,
+                      disableOnInteraction: false,
+                    }"
+                    :breakpoints="{
+                      1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                      },
+                    }"
+                  >                    
+                    <swiper-slide class="swiper-slide">
+                        <iframe height="360" class="w-100" src="https://www.youtube.com/embed/ymIwxGhFP3k?si=RC6gHnKvgdMep6Go" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <iframe height="360" class="w-100" src="https://www.youtube.com/embed/4dh25ciA8Xo?si=Codb8_uxLRkYHOo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <iframe height="360" class="w-100" src="https://www.youtube.com/embed/ORni1WW8T7E?si=AV9srRVAIyDSwzcf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <iframe height="360" class="w-100" src="https://www.youtube.com/embed/KBjc5Aa0IYE?si=6PTF3ldW1cbQmElj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </swiper-slide>                    
+                </swiper>                
             </div>
         </div>
     </section>
@@ -255,47 +284,47 @@
                 <p class="paragraph">Immerse yourself in a visual journey that captures the essence of traditional and contemporary expressions. Our Gallery Documentation section is a testament to the diverse beauty.</p>
             </div>
         </div>
-        <div class="gap-row row-gallery">
-            <a href="../assets/images/galleries/gallery-1.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+        <Lightgallery :settings="{ speed: 500, plugins: plugins }" :onInit="onInit" :onBeforeSlide="onBeforeSlide" class="gap-row row-gallery">
+            <a href="../assets/images/galleries/gallery-1.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-1.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-            <a href="../assets/images/galleries/gallery-3.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+            <a href="../assets/images/galleries/gallery-3.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-3.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-            <a href="../assets/images/galleries/gallery-6.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+            <a href="../assets/images/galleries/gallery-6.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-6.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-            <a href="../assets/images/galleries/gallery-9.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+            <a href="../assets/images/galleries/gallery-9.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-9.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-             <a href="../assets/images/galleries/gallery-2.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+             <a href="../assets/images/galleries/gallery-2.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-2.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-             <a href="../assets/images/galleries/gallery-4.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+             <a href="../assets/images/galleries/gallery-4.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-4.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-             <a href="../assets/images/galleries/gallery-5.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+             <a href="../assets/images/galleries/gallery-5.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-5.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-             <a href="../assets/images/galleries/gallery-7.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+             <a href="../assets/images/galleries/gallery-7.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-7.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-             <a href="../assets/images/galleries/gallery-8.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+             <a href="../assets/images/galleries/gallery-8.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-8.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-            <a href="../assets/images/galleries/gallery-10.svg') }}" data-lightbox="gallery-documentation" class="w-100">
+            <a href="../assets/images/galleries/gallery-10.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-10.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
-        </div>
+        </Lightgallery>
     </section>
 
     <section class="testimonial gap-section" id="testimonial">
@@ -309,102 +338,119 @@
         </div>
         <div class="row gap-row">
             <div class="col-12 position-relative">
-                <div class="swiper mySwiper swiperTestimonial position-relative">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card-testimonial">
-                                <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                                <p class="paragraph">“ArtistryIndo has become my virtual haven for inspiration. As a graphic designer, the diverse palette of Indonesian arts fuels my creativity.”</p>
-                                <div class="profile-wrapper d-flex align-items-center gap-2">
-                                    <img src="../assets/images/testimonials/testimonial-1.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                    <div class="wrapper">
-                                        <h6 class="username">Sarah Kingston</h6>
-                                        <p class="job">Graphic Designer</p>
-                                    </div>
+                  <swiper 
+                    class="position-relative"
+                    :slides-per-view="1"
+                    :space-between="20"
+                    :modules="modules"
+                    :loop="true"
+                    :autoplay="{
+                      delay: 5000,
+                      disableOnInteraction: false,
+                    }"
+                    :breakpoints="{
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                      },
+                      1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                      },
+                    }"
+                  > 
+                    <swiper-slide class="swiper-slide">
+                        <div class="card-testimonial">
+                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
+                            <p class="paragraph">“ArtistryIndo has become my virtual haven for inspiration. As a graphic designer, the diverse palette of Indonesian arts fuels my creativity.”</p>
+                            <div class="profile-wrapper d-flex align-items-center gap-2">
+                                <img src="../assets/images/testimonials/testimonial-1.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
+                                <div class="wrapper">
+                                    <h6 class="username">Sarah Kingston</h6>
+                                    <p class="job">Graphic Designer</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card-testimonial">
-                                <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                                <p class="paragraph">“ArtistryIndo played a pivotal role in elevating my art career. Being featured here gave my work exposure beyond my expectations.”</p>
-                                <div class="profile-wrapper d-flex align-items-center gap-2">
-                                    <img src="../assets/images/testimonials/testimonial-2.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                    <div class="wrapper">
-                                        <h6 class="username">James Mitchell</h6>
-                                        <p class="job">Emerging Artist</p>
-                                    </div>
+                    </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <div class="card-testimonial">
+                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
+                            <p class="paragraph">“ArtistryIndo played a pivotal role in elevating my art career. Being featured here gave my work exposure beyond my expectations.”</p>
+                            <div class="profile-wrapper d-flex align-items-center gap-2">
+                                <img src="../assets/images/testimonials/testimonial-2.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
+                                <div class="wrapper">
+                                    <h6 class="username">James Mitchell</h6>
+                                    <p class="job">Emerging Artist</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card-testimonial">
-                                <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                                <p class="paragraph">“ArtistryIndo is not just a platform; it's a cultural phenomenon. As a marketing professional, I appreciate how it seamlessly combines.”</p>
-                                <div class="profile-wrapper d-flex align-items-center gap-2">
-                                    <img src="../assets/images/testimonials/testimonial-3.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                    <div class="wrapper">
-                                        <h6 class="username">Mia Lawson</h6>
-                                        <p class="job">Marketing Manager</p>
-                                    </div>
+                      </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <div class="card-testimonial">
+                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
+                            <p class="paragraph">“ArtistryIndo is not just a platform; it's a cultural phenomenon. As a marketing professional, I appreciate how it seamlessly combines.”</p>
+                            <div class="profile-wrapper d-flex align-items-center gap-2">
+                                <img src="../assets/images/testimonials/testimonial-3.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
+                                <div class="wrapper">
+                                    <h6 class="username">Mia Lawson</h6>
+                                    <p class="job">Marketing Manager</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card-testimonial">
-                                <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                                <p class="paragraph">“ArtistryIndo is a beacon for preserving traditional Indonesian arts. As a cultural preservationist, I've witnessed the platform's impact.”</p>
-                                <div class="profile-wrapper d-flex align-items-center gap-2">
-                                    <img src="../assets/images/testimonials/testimonial-4.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                    <div class="wrapper">
-                                        <h6 class="username">Alex Harrison</h6>
-                                        <p class="job">Cultural Preservationist</p>
-                                    </div>
+                      </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <div class="card-testimonial">
+                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
+                            <p class="paragraph">“ArtistryIndo is a beacon for preserving traditional Indonesian arts. As a cultural preservationist, I've witnessed the platform's impact.”</p>
+                            <div class="profile-wrapper d-flex align-items-center gap-2">
+                                <img src="../assets/images/testimonials/testimonial-4.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
+                                <div class="wrapper">
+                                    <h6 class="username">Alex Harrison</h6>
+                                    <p class="job">Cultural Preservationist</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card-testimonial">
-                                <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                                <p class="paragraph">“ArtistryIndo has been an invaluable resource for infusing cultural richness into my travel narratives. The content is not just informative.”</p>
-                                <div class="profile-wrapper d-flex align-items-center gap-2">
-                                    <img src="../assets/images/testimonials/testimonial-5.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                    <div class="wrapper">
-                                        <h6 class="username">Grace Wanderer</h6>
-                                        <p class="job">Travel Blogger</p>
-                                    </div>
+                      </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <div class="card-testimonial">
+                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
+                            <p class="paragraph">“ArtistryIndo has been an invaluable resource for infusing cultural richness into my travel narratives. The content is not just informative.”</p>
+                            <div class="profile-wrapper d-flex align-items-center gap-2">
+                                <img src="../assets/images/testimonials/testimonial-5.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
+                                <div class="wrapper">
+                                    <h6 class="username">Grace Wanderer</h6>
+                                    <p class="job">Travel Blogger</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card-testimonial">
-                                <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                                <p class="paragraph">“As a music enthusiast, ArtistryIndo has broadened my horizons to the enchanting world of Indonesian music and performing arts.”</p>
-                                <div class="profile-wrapper d-flex align-items-center gap-2">
-                                    <img src="../assets/images/testimonials/testimonial-6.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                    <div class="wrapper">
-                                        <h6 class="username">Jazz Harmony</h6>
-                                        <p class="job">Music Enthusiast</p>
-                                    </div>
+                      </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <div class="card-testimonial">
+                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
+                            <p class="paragraph">“As a music enthusiast, ArtistryIndo has broadened my horizons to the enchanting world of Indonesian music and performing arts.”</p>
+                            <div class="profile-wrapper d-flex align-items-center gap-2">
+                                <img src="../assets/images/testimonials/testimonial-6.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
+                                <div class="wrapper">
+                                    <h6 class="username">Jazz Harmony</h6>
+                                    <p class="job">Music Enthusiast</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card-testimonial">
-                                <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
-                                <p class="paragraph">“ArtistryIndo's seamless integration of technology with cultural exploration is truly commendable. The user-friendly interface and immersive content.”</p>
-                                <div class="profile-wrapper d-flex align-items-center gap-2">
-                                    <img src="../assets/images/testimonials/testimonial-7.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
-                                    <div class="wrapper">
-                                        <h6 class="username">Tech Explorer</h6>
-                                        <p class="job">Technology Analyst</p>
-                                    </div>
+                      </swiper-slide>
+                    <swiper-slide class="swiper-slide">
+                        <div class="card-testimonial">
+                            <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
+                            <p class="paragraph">“ArtistryIndo's seamless integration of technology with cultural exploration is truly commendable. The user-friendly interface and immersive content.”</p>
+                            <div class="profile-wrapper d-flex align-items-center gap-2">
+                                <img src="../assets/images/testimonials/testimonial-7.svg" alt="Testimonial Image Profile" class="img-fluid" width="38">
+                                <div class="wrapper">
+                                    <h6 class="username">Tech Explorer</h6>
+                                    <p class="job">Technology Analyst</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination swiper-pagination-testimonial"></div>
+                      </swiper-slide>                    
+                </swiper>                
             </div>
         </div>
     </section>
