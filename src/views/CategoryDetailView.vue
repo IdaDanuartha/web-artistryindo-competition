@@ -6,23 +6,29 @@
   import 'swiper/css';
 
   import 'swiper/css/pagination';
-  // import {Swiper, SwiperSlide} from "swiper/vue";
-  // import {Autoplay, Pagination} from "swiper/modules";
+
+//   import required modules
+  import { Autoplay, Pagination } from 'swiper/modules';
+
+//   import Lightgallery from 'lightgallery/vue';
+//   import lgThumbnail from 'lightgallery/plugins/thumbnail';
+//   import lgZoom from 'lightgallery/plugins/zoom';
+
   export default {
-    // components: {
-    //   Swiper,
-    //   SwiperSlide,
-    //   //   Lightgallery
-    // },
-    // data: () => ({
-    //   // plugins: [lgThumbnail, lgZoom],
-    //   isActive: true
-    // }),
-    // setup() {
-    //   return {
-    //     modules: [Autoplay, Pagination],
-    //   };
-    // },
+    components: {
+      Swiper,
+      SwiperSlide,
+    //   Lightgallery
+    },
+    data: () => ({
+        // plugins: [lgThumbnail, lgZoom],
+        isActive: true
+    }),
+    setup() {
+      return {
+        modules: [Autoplay, Pagination],        
+      };
+    },
   };
 </script>
 
