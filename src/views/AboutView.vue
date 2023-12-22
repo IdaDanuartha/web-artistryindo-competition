@@ -32,9 +32,10 @@
   };
 </script>
 
-<template>  
-<main class="container mainpage">
-    <section class="hero d-flex align-items-center">
+<template>
+  <div>
+    <main class="container mainpage">
+      <section class="hero d-flex align-items-center">
         <div class="row align-items-center">
             <div class="col">
                 <p class="subtitle">Celebrating Indonesia's Rich Artistic Heritage</p>
@@ -62,59 +63,59 @@
         </div>
         <div class="row gap-row">
             <div class="col-12 position-relative">
-                <swiper 
+              <swiper 
                 class="position-relative"
                 :slides-per-view="1"
                 :space-between="10"
                 :modules="modules"
                 :breakpoints="{
-                    768: {
+                  768: {
                     slidesPerView: 2,
                     spaceBetween: 10,
-                    },
-                    1024: {
+                  },
+                  1024: {
                     slidesPerView: 3,
                     spaceBetween: 10,
-                    },
+                  },
                 }"
-                >
+              >
                 <swiper-slide class="swiper-slide p-1">
-                    <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                    <a href="#" class="category-item">
                         <img src="../assets/images/thumbnail-categories/thumbnail-category-1.svg" alt="Thumbnail Category" class="img-fluid w-100">
                         <h6>Performing Arts Heritage</h6>
                     </a>
                 </swiper-slide>
                 <swiper-slide class="swiper-slide p-1">
-                    <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                    <a href="#" class="category-item">
                         <img src="../assets/images/thumbnail-categories/thumbnail-category-2.svg" alt="Thumbnail Category" class="img-fluid w-100">
                         <h6>Musical Arts Heritage</h6>
                     </a>
                 </swiper-slide>
                 <swiper-slide class="swiper-slide p-1">
-                    <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                    <a href="#" class="category-item">
                         <img src="../assets/images/thumbnail-categories/thumbnail-category-3.svg" alt="Thumbnail Category" class="img-fluid w-100">
                         <h6>Traditional Fine Arts</h6>
                     </a>
                 </swiper-slide>
                 <swiper-slide class="swiper-slide p-1">
-                    <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                    <a href="#" class="category-item">
                         <img src="../assets/images/thumbnail-categories/thumbnail-category-4.svg" alt="Thumbnail Category" class="img-fluid w-100">
                         <h6>Indonesian Literature and Folklore</h6>
                     </a>
                 </swiper-slide>
                 <swiper-slide class="swiper-slide p-1">
-                    <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                    <a href="#" class="category-item">
                         <img src="../assets/images/thumbnail-categories/thumbnail-category-5.svg" alt="Thumbnail Category" class="img-fluid w-100">
                         <h6>Traditional Culinary Delights</h6>
                     </a>
                 </swiper-slide>
                 <swiper-slide class="swiper-slide p-1">
-                    <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                    <a href="#" class="category-item">
                         <img src="../assets/images/thumbnail-categories/thumbnail-category-6.svg" alt="Thumbnail Category" class="img-fluid w-100">
                         <h6>Aksara and Literature</h6>
                     </a>
                 </swiper-slide>                    
-                </swiper>              
+              </swiper>              
             </div>
         </div>
     </section>
@@ -195,23 +196,23 @@
         </div>
         <div class="row gap-row">
             <div class="col-12 position-relative">
-                    <swiper 
+                  <swiper 
                     class="position-relative"
                     :slides-per-view="1"
                     :space-between="20"
                     :modules="modules"
                     :loop="true"
                     :autoplay="{
-                        delay: 5000,
-                        disableOnInteraction: false,
+                      delay: 5000,
+                      disableOnInteraction: false,
                     }"
                     :breakpoints="{
-                        1024: {
+                      1024: {
                         slidesPerView: 2,
                         spaceBetween: 20,
-                        },
+                      },
                     }"
-                    >                    
+                  >                    
                     <swiper-slide class="swiper-slide">
                         <iframe height="360" class="w-100" src="https://www.youtube.com/embed/ymIwxGhFP3k?si=RC6gHnKvgdMep6Go" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </swiper-slide>
@@ -237,29 +238,29 @@
             <div class="col offset-lg-1 offset-xxl-0">
                 <h3 class="title">Discover ArtistryIndo Unveiling the Heartbeat of Indonesian Creativity</h3>
                 <ul class="nav button-wrapper d-flex gap-2">
-                    <li class="nav-item" role="presentation">
+                  <li class="nav-item" role="presentation">
                     <button data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" class="button-reverse-extrasmall button-definition active">Definition</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
+                  </li>
+                  <li class="nav-item" role="presentation">
                     <button data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true" class="button-reverse-extrasmall button-vission">Vission & Mission</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
+                  </li>
+                  <li class="nav-item" role="presentation">
                     <button data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="true" class="button-reverse-extrasmall button-history">Histories</button>
-                    </li>
+                  </li>
                 </ul>
                 <div class="tab-content my-4" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">                    
+                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">                    
                     <p class="paragraph paragraph-1">At ArtistryIndo, we define ourselves as more than a platform; we are custodians of Indonesia's artistic legacy. Our mission goes beyond mere representation; we strive to be a dynamic force that showcases, preserves, and innovates the diverse tapestry of Indonesian arts.</p>
                     <p class="paragraph paragraph-2">Join us in exploring the vibrant stories, traditions, and contemporary expressions that form the very essence of ArtistryIndo.</p>                
-                    </div>
-                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                  </div>
+                  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                     <p class="paragraph paragraph-1">Our vision at ArtistryIndo is to stand as the foremost destination for the global celebration of Indonesian arts. Rooted in this vision, our mission is to preserve and showcase the rich cultural diversity of Indonesia through dynamic, immersive experiences.</p>
                     <p class="paragraph paragraph-2">We are committed to fostering a deeper appreciation for Indonesian arts, connecting cultures, and providing a platform for artists to thrive.</p>
-                    </div>
-                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                  </div>
+                  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                     <p class="paragraph paragraph-1">ArtistryIndo has a story that unfolds through the years, starting with our establishment in [year]. From humble beginnings, we have evolved into a cultural hub that bridges tradition and innovation. Our history is a testament to the dedication of our team, the vibrant artists we collaborate with, and the growing community of art enthusiasts who contribute to the flourishing landscape of Indonesian arts.</p>
                     <p class="paragraph paragraph-2">Explore the milestones that shape ArtistryIndo's journey, as we continue to weave the threads of Indonesia's artistic heritage into the global cultural narrative.</p>
-                    </div>                  
+                  </div>                  
                 </div>
                 <div class="row fact-wrapper">
                     <div class="col-6 col-md-3 d-flex flex-column align-items-center text-center">
@@ -309,23 +310,23 @@
                 <img src="../assets/images/galleries/gallery-9.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-                <a href="../assets/images/galleries/gallery-2.svg" class="w-100">
+             <a href="../assets/images/galleries/gallery-2.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-2.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-                <a href="../assets/images/galleries/gallery-4.svg" class="w-100">
+             <a href="../assets/images/galleries/gallery-4.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-4.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-                <a href="../assets/images/galleries/gallery-5.svg" class="w-100">
+             <a href="../assets/images/galleries/gallery-5.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-5.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-                <a href="../assets/images/galleries/gallery-7.svg" class="w-100">
+             <a href="../assets/images/galleries/gallery-7.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-7.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
-                <a href="../assets/images/galleries/gallery-8.svg" class="w-100">
+             <a href="../assets/images/galleries/gallery-8.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-8.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
 
@@ -346,27 +347,27 @@
         </div>
         <div class="row gap-row">
             <div class="col-12 position-relative">
-                    <swiper 
+                  <swiper 
                     class="position-relative"
                     :slides-per-view="1"
                     :space-between="20"
                     :modules="modules"
                     :loop="true"
                     :autoplay="{
-                        delay: 5000,
-                        disableOnInteraction: false,
+                      delay: 5000,
+                      disableOnInteraction: false,
                     }"
                     :breakpoints="{
-                        768: {
+                      768: {
                         slidesPerView: 2,
                         spaceBetween: 20,
-                        },
-                        1024: {
+                      },
+                      1024: {
                         slidesPerView: 4,
                         spaceBetween: 20,
-                        },
+                      },
                     }"
-                    > 
+                  > 
                     <swiper-slide class="swiper-slide">
                         <div class="card-testimonial">
                             <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
@@ -392,7 +393,7 @@
                                 </div>
                             </div>
                         </div>
-                        </swiper-slide>
+                      </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <div class="card-testimonial">
                             <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
@@ -405,7 +406,7 @@
                                 </div>
                             </div>
                         </div>
-                        </swiper-slide>
+                      </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <div class="card-testimonial">
                             <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
@@ -418,7 +419,7 @@
                                 </div>
                             </div>
                         </div>
-                        </swiper-slide>
+                      </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <div class="card-testimonial">
                             <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
@@ -431,7 +432,7 @@
                                 </div>
                             </div>
                         </div>
-                        </swiper-slide>
+                      </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <div class="card-testimonial">
                             <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
@@ -444,7 +445,7 @@
                                 </div>
                             </div>
                         </div>
-                        </swiper-slide>
+                      </swiper-slide>
                     <swiper-slide class="swiper-slide">
                         <div class="card-testimonial">
                             <img src="../assets/images/icons/quote-testimonial.svg" alt="Quote Icon" class="img-fluid" width="30">
@@ -457,7 +458,7 @@
                                 </div>
                             </div>
                         </div>
-                        </swiper-slide>                    
+                      </swiper-slide>                    
                 </swiper>                
             </div>
         </div>
@@ -626,5 +627,72 @@
     </div>
 
     <!-- END MODAL -->
-</main>
+    </main>
+    <footer class="footer gap-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 mb-5 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+                    <img src="../assets/images/brand/logo-brand.svg" alt="Logo Brand" class="img-fluid" width="56">
+                    <p class="caption">Explore the diverse and vibrant world of Indonesian art at ArtistryIndo. From traditional dance to modern installations</p>
+                    <div class="sosmed-wrapper d-flex gap-1">
+                        <a href="https://www.facebook.com/" target="_block" class="sosmed-item d-flex justify-content-center align-items-center">
+                            <img src="../assets/images/icons/facebook.svg" alt="Facebook Icon" class="img-fluid" width="15">
+                        </a>
+                        <a href="https://www.whatsapp.com/" target="_block" class="sosmed-item d-flex justify-content-center align-items-center">
+                            <img src="../assets/images/icons/whatsapp.svg" alt="Whatsapp Icon" class="img-fluid" width="15">
+                        </a>
+                        <a href="https://twitter.com/?lang=id" target="_block" class="sosmed-item d-flex justify-content-center align-items-center">
+                            <img src="../assets/images/icons/twitter.svg" alt="Twitter Icon" class="img-fluid" width="15">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 offset-xl-1">
+                    <h6 class="footer-title">Quick Link</h6>
+                    <div class="footer-link d-flex flex-column gap-2">
+                        <a href="/" class="link-item">Home</a>
+                        <a href="/about" class="link-item">About Us</a>
+                        <a href="/categories-artistry" class="link-item">Category Artistry</a>
+                        <a href="/blogs" class="link-item">Blog</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="footer-title">Home</h6>
+                    <div class="footer-link d-flex flex-column gap-2">
+                        <a href="#service" class="link-item">Our Service</a>
+                        <a href="#showcase" class="link-item">Artistry Highlight</a>
+                        <a href="#gallery" class="link-item">Gallery Documentation</a>
+                        <a href="#testimonial" class="link-item">Testimonial</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-xl-2 mt-5 mt-md-0">
+                    <h6 class="footer-title">Our Service</h6>
+                    <div class="footer-link d-flex flex-column gap-2">
+                        <a href="#service" class="link-item">Custom Cultural Tours</a>
+                        <a href="#service" class="link-item">Workshop Experiences</a>
+                        <a href="#service" class="link-item">Art Consultations</a>
+                        <a href="#service" class="link-item">Virtual Art Experiences</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 mt-5 mt-md-0">
+                    <h6 class="footer-title">Help & Guide</h6>
+                    <div class="footer-link d-flex flex-column gap-2">
+                        <a href="" class="link-item">Terms & Conditions</a>
+                        <a href="" class="link-item">Privacy Policy</a>
+                        <a href="" class="link-item">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <p class="copyright">Copyright © 2023 ArtistryIndo.. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </div>
 </template>

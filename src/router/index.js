@@ -9,6 +9,13 @@ const routes = [
       {path: '/artistry', name: 'artistry', component: () => import('../views/ArtistryView.vue')},
     ]
   },
+  {
+    path: '/about',
+    component: () => import('../layouts/AboutLayout.vue'),
+    children: [
+      {path: '/', name: 'about', component: () => import('../views/AboutView.vue')},
+    ]
+  },
 ]
 
 const router = createRouter({
