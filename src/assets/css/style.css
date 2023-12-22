@@ -79,7 +79,17 @@ a {
 
 
 /* COMPONENT */
-.button-primary-small {
+.modal .err-message {
+  background-color: rgb(var(--primary-color));
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  margin-bottom: -15px;
+}
+
+.button-primary-small,
+.button-reverse-small {
   padding: 12px 14px;
   border-radius: 4px;
   background-color: rgba(var(--primary-color), 1);
@@ -87,6 +97,13 @@ a {
   box-shadow: 3px 3px 0 rgba(var(--dark-color), 1);
   font-size: 0.875rem;
   color: rgba(var(--light-color), 1);
+}
+
+.button-reverse-small {
+  color: rgba(var(--dark-color), 1);
+  background-color: rgba(var(--light-color), 1);
+  border: 2px solid rgba(var(--primary-color), 1);
+  box-shadow: 3px 3px 0 rgba(var(--primary-color), 1);
 }
 
 .button-primary,
@@ -118,6 +135,7 @@ a {
 }
 
 .button-primary-small:hover,
+.button-reverse-small:hover,
 .button-primary:hover,
 .button-reverse:hover,
 .button-reverse-extrasmall:hover,
@@ -159,7 +177,8 @@ a {
   line-height: 150%;
 }
 
-.button-group {
+.button-group,
+.mission-wrapper {
   margin-top: 32px;
 }
 
@@ -193,10 +212,68 @@ a {
   background-color: rgba(var(--primary-color), 1) !important;
 }
 
+.swiper-pagination {
+  bottom: -42px !important;
+  position: absolute;
+}
+
 .row-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+}
+
+form.form {
+  width: 100%;
+  display: inline-block;
+}
+
+form.form .input {
+  width: 100%;
+  padding: 15px 16px;
+  color: rgba(var(--dark-color), 0.72);
+  font-size: 0.913rem;
+  border-radius: 4px;
+  border: 2px solid rgba(var(--dark-color), 1);
+  background-color: rgba(var(--light-color), 1);
+  box-shadow: 2px 2px 0px 0px rgba(var(--dark-color), 1);
+  outline: none;
+  stroke: none;
+}
+
+form.form .input:not(:placeholder-shown),
+form.form .input:focus {
+  box-shadow: 2px 2px 0px 0px transparent;
+}
+
+.modal form.form {
+  margin-top: 32px;
+}
+
+form.form .input::placeholder {
+  font-size: 0.913rem;
+  color: rgba(var(--dark-color), 0.42);
+}
+
+.link-redirect {
+  font-size: 0.913rem;
+  color: rgba(var(--dark-color), 0.72);
+  margin-top: 32px;
+}
+
+.link-redirect button {
+  font-size: 0.913rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  stroke: none;
+  color: rgba(var(--primary-color), 1);
+  font-family: var(--semibold-font);
+  padding: 0;
+}
+
+.link-redirect button:hover {
+  text-decoration: underline;
 }
 /* END COMPONENT */
 
@@ -346,30 +423,53 @@ a {
   line-height: 150%;
   margin-top: 20px;
 }
+
+.modal .modal-content .img-award {
+  border-radius: 6px; 
+  margin-top: 16px;
+  border: 5px solid rgba(var(--dark-color), 1);
+}
 /* END MODAL */
 
 
 /* MAINPAGE */
-.mainpage .hero {
-  height: 88vh;  
+.mainpage .hero,
+.about .hero,
+.category .hero {
+  height: 88vh;
 }
 
 .mainpage section.hero .paragraph {
   width: 85%;
 }
 
-.mainpage section.category .category-item > img {
+.about section.award .award-item,
+.about section.team .team-item {
+  background-color: transparent;
+  border: none;
+  stroke: none;
+  outline: none;
+  width: 100%;
+}
+
+.mainpage section.category .category-item > img,
+.about section.award .award-item > img,
+.about section.team .team-item > img {
   border-radius: 6px;
   border: 4px solid rgba(var(--dark-color), 1);
   position: relative;
 }
 
-.mainpage section.category .category-item:hover > img {
+.mainpage section.category .category-item:hover > img,
+.about section.award .award-item:hover > img,
+.about section.team .team-item:hover > img {
   box-shadow: 4px 4px 0px 0px rgba(var(--dark-color), 1);
   filter: saturate(0);
 }
 
-.mainpage section.category .category-item > h6 {
+.mainpage section.category .category-item > h6,
+.about section.award .award-item > h6,
+.about section.team .team-item > h6 {
   opacity: 0;
   font-size: 1rem;
   color: rgba(var(--primary-color), 1);
@@ -383,14 +483,11 @@ a {
   background-color: rgba(var(--dark-color), 1);
 }
 
-.mainpage section.category .category-item:hover > h6 {
+.mainpage section.category .category-item:hover > h6,
+.about section.award .award-item:hover > h6,
+.about section.team .team-item:hover > h6 {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
-}
-
-.mainpage .swiper-pagination-category {
-  bottom: -42px !important;
-  position: absolute;
 }
 
 .mainpage section.service .card-service {
@@ -492,78 +589,93 @@ a {
   margin-top: 8px;
 }
 
-.mainpage section.gallery img {
+.mainpage section.gallery img,
+.about section.gallery img {
   border-radius: 5px;
   border: 4px solid rgba(var(--dark-color), 1);
 }
 
-.mainpage section.gallery img:hover {
+.mainpage section.gallery img:hover,
+.about section.gallery img:hover {
   filter: saturate(0);
 }
 
-.mainpage section.testimonial .card-testimonial {
+.mainpage section.testimonial .card-testimonial,
+.about section.testimonial .card-testimonial {
   padding: 30px 24px;
   border: 1px solid rgba(var(--primary-color), 0.16);
   background-color: rgba(var(--primary-color), 0.08);
   border-radius: 5px;
 }
 
-.mainpage section.testimonial .card-testimonial .paragraph {
+.mainpage section.testimonial .card-testimonial .paragraph,
+.about section.testimonial .card-testimonial .paragraph {
   font-size: 0.913rem;
   color: rgba(var(--dark-color), 0.72);
   margin: 16px 0;
 }
 
-.mainpage section.testimonial .card-testimonial .profile-wrapper img {
+.mainpage section.testimonial .card-testimonial .profile-wrapper img,
+.about section.testimonial .card-testimonial .profile-wrapper img {
   border-radius: 9999px;
 }
 
-.mainpage section.testimonial .card-testimonial .profile-wrapper .username {
+.mainpage section.testimonial .card-testimonial .profile-wrapper .username,
+.about section.testimonial .card-testimonial .profile-wrapper .username {
   font-size: 1rem;
   font-family: var(--semibold-font);
   color: rgba(var(--primary-color), 1);
   margin-bottom: 2px;
 }
 
-.mainpage section.testimonial .card-testimonial .profile-wrapper .job {
+.mainpage section.testimonial .card-testimonial .profile-wrapper .job,
+.about section.testimonial .card-testimonial .profile-wrapper .job {
   font-size: 0.813rem;
   color: rgba(var(--dark-color), 1);
 }
 
-.mainpage section.blog .card-blog img {
+.mainpage section.blog .card-blog img,
+.category section.category .card-category img {
   border: 4px solid rgba(var(--dark-color), 1);
   border-radius: 5px;
   box-shadow: 4px 4px 0px 0px transparent;
 }
 
-.mainpage section.blog .card-blog:hover img {
+.mainpage section.blog .card-blog:hover img,
+.category section.category .card-category:hover img {
   box-shadow: 4px 4px 0px 0px rgba(var(--dark-color), 1);
 }
 
-.mainpage section.blog .card-blog .card-title {
+.mainpage section.blog .card-blog .card-title,
+.category section.category .card-category .card-title {
   font-size: 1rem;
   color: rgba(var(--dark-color), 1);
   margin: 14px 0 4px 0;
   line-height: 140%;
-}
-
-.mainpage section.blog .card-blog:hover .card-title {
-  color: rgba(var(--primary-color), 1);
   font-family: var(--semibold-font);
 }
 
-.mainpage section.blog .card-blog .card-caption {
+.mainpage section.blog .card-blog:hover .card-title,
+.category section.category .card-category:hover .card-title {
+  color: rgba(var(--primary-color), 1);
+}
+
+.mainpage section.blog .card-blog .card-caption,
+.category section.category .card-category .card-caption {
   color: rgba(var(--dark-color), 0.72);
   font-size: 0.875rem;
   margin-bottom: 12px;
 }
 
-.mainpage section.blog .card-blog .card-date {
+.mainpage section.blog .card-blog .card-date,
+.category section.category .card-category .card-date {
   font-size: 0.813rem;
   color: rgba(var(--dark-color), 0.42);
 }
 
-.mainpage section.cta {
+.mainpage section.cta,
+.about section.cta,
+.category section.cta {
   overflow: hidden;
   padding: 72px 0;
   background-color: rgba(var(--primary-color), 1);
@@ -572,27 +684,37 @@ a {
   filter: drop-shadow(6px 6px 0px rgba(var(--dark-color), 1));
 }
 
-.mainpage section.cta .headline {
+.mainpage section.cta .headline,
+.about section.cta .headline,
+.category section.cta .headline {
   color: rgba(var(--light-color), 1);
   margin: 0;
 }
 
-.mainpage section.cta .paragraph {
+.mainpage section.cta .paragraph,
+.about section.cta .paragraph,
+.category section.cta .paragraph {
   color: rgba(var(--light-color), 1);
   margin: 36px 0;
   width: 70%;
 }
 
-.mainpage section.cta .button-reverse {
+.mainpage section.cta .button-reverse,
+.about section.cta .button-reverse,
+.category section.cta .button-reverse {
   border: 2px solid rgba(var(--dark-color), 1);
   box-shadow: 3px 3px 0 rgba(var(--dark-color), 1);
 }
 
-.mainpage section.cta .button-reverse:hover {
+.mainpage section.cta .button-reverse:hover,
+.about section.cta .button-reverse:hover,
+.category section.cta .button-reverse:hover {
   box-shadow: none;
 }
 
-.mainpage section.cta .style-1 {
+.mainpage section.cta .style-1,
+.about section.cta .style-1,
+.category section.cta .style-1 {
   position: absolute;
   top: -30%;
   right: -30%;
@@ -602,7 +724,9 @@ a {
   background-color: rgba(var(--light-color), 0.06);
 }
 
-.mainpage section.cta .style-2 {
+.mainpage section.cta .style-2,
+.about section.cta .style-2,
+.category section.cta .style-2 {
   position: absolute;
   top: -30%;
   right: -65%;
@@ -610,6 +734,28 @@ a {
   width: 1200px;
   height: 1200px;
   background-color: rgba(var(--light-color), 0.06);
+}
+
+.about section.mission .paragraph {
+  margin-top: 32px;
+}
+
+.about section.mission .mission-wrapper img {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 0px 0px rgba(var(--dark-color), 1);
+}
+
+.about section.mission .mission-wrapper .mission-caption {
+  font-size: 0.813rem;
+  color: rgba(var(--dark-color), 0.42);
+  margin-bottom: 2px;
+}
+
+.about section.mission .mission-wrapper .mission-title {
+  color: rgba(var(--dark-color), 1);
+  font-size: 0.913rem;
 }
 /* END MAINPAGE */
 
@@ -686,11 +832,15 @@ footer.copyright .copyright {
       width: 100%;
   }
 
-  .mainpage .hero {
+  .mainpage .hero,
+  .about .hero,
+  .category .hero {
       height: fit-content;
   }
 
-  .mainpage section.cta .paragraph {
+  .mainpage section.cta .paragraph,
+  .about section.cta .paragraph,
+  .category section.cta .paragraph {
       width: 80%;
   }
 }
@@ -745,11 +895,15 @@ footer.copyright .copyright {
       grid-template-columns: 1fr;
   }
 
-  .mainpage section.cta {
+  .mainpage section.cta,
+  .about section.cta,
+  .category section.cta {
       padding: 52px 6px;
   }
 
-  .mainpage section.cta .paragraph {
+  .mainpage section.cta .paragraph,
+  .about section.cta .paragraph,
+  .category section.cta .paragraph {
       width: 100%;
   }
 

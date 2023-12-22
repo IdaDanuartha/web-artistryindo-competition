@@ -10,28 +10,20 @@
   // import required modules
   import { Autoplay, Pagination } from 'swiper/modules';
 
-  import Lightgallery from 'lightgallery/vue';
-  import lgThumbnail from 'lightgallery/plugins/thumbnail';
-  import lgZoom from 'lightgallery/plugins/zoom';
+//   import Lightgallery from 'lightgallery/vue';
+//   import lgThumbnail from 'lightgallery/plugins/thumbnail';
+//   import lgZoom from 'lightgallery/plugins/zoom';
 
   export default {
     components: {
       Swiper,
       SwiperSlide,
-      Lightgallery
+    //   Lightgallery
     },
     data: () => ({
-        plugins: [lgThumbnail, lgZoom],
+        // plugins: [lgThumbnail, lgZoom],
         isActive: true
     }),
-    methods: {
-        onInit: () => {
-            console.log('lightGallery has been initialized');
-        },
-        onBeforeSlide: () => {
-            console.log('calling before slide');
-        },
-    },
     setup() {
       return {
         modules: [Autoplay, Pagination],        
@@ -301,7 +293,7 @@
                 <p class="paragraph">Immerse yourself in a visual journey that captures the essence of traditional and contemporary expressions. Our Gallery Documentation section is a testament to the diverse beauty.</p>
             </div>
         </div>
-        <Lightgallery :settings="{ speed: 500, plugins: plugins }" :onInit="onInit" :onBeforeSlide="onBeforeSlide" class="gap-row row-gallery">
+        <div class="gap-row row-gallery">
             <a href="../assets/images/galleries/gallery-1.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-1.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
@@ -341,7 +333,7 @@
             <a href="../assets/images/galleries/gallery-10.svg" class="w-100">
                 <img src="../assets/images/galleries/gallery-10.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
             </a>
-        </Lightgallery>
+        </div>
     </section>
 
     <section class="testimonial gap-section" id="testimonial">
@@ -633,6 +625,7 @@
             </div>
         </div>
     </div>
+
     <!-- END MODAL -->
     </main>
     <footer class="footer gap-section">

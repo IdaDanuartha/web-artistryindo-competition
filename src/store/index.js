@@ -5,7 +5,7 @@
 // import moment from 'moment/moment'
 
 import { auth } from '../firebase/config'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
+import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
 
 import { createStore } from 'vuex'
 
@@ -29,13 +29,27 @@ const store = createStore({
     }
   },
   actions: {    
-    async signup(context, {email, password}) {
-      const res = await createUserWithEmailAndPassword(auth, email, password)
-
-      if(res) {
-        context.commit('setUser', res.user)
-      } else {
-        throw new Error('could not complete signup')
+    async signup(context, {username, email, password}) {
+      try {
+        const res = await createUserWithEmailAndPassword(auth, email, password);
+        
+        // If the above line succeeds, the user is created, and now you can update the profile
+        await updateProfile(auth.currentUser, { displayName: username });
+    
+        // After successful signup and profile update, commit the user to the Vuex store
+        context.commit('setUser', res.user);
+      } catch (error) {
+        // Handle specific error when email is already registered
+        if (error.code === 'auth/email-already-in-use') {
+          // You can show a user-friendly message or handle the error as needed
+          console.error('Email is already registered. Please use a different email.');
+        } else {
+          // Handle other errors
+          console.error('An error occurred during signup:', error.message);
+        }
+        
+        // Rethrow the error to indicate that the signup process failed
+        throw error;
       }
     },
     async login(context, {email, password}) {
