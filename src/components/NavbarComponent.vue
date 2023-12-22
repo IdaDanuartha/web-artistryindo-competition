@@ -11,7 +11,7 @@
               <a href="#" class="link-item d-none d-md-inline-block">Category</a>
               <a href="#" class="link-item d-none d-md-inline-block">Blog</a>
           </div>
-          <button type="button" class="navbar-button d-md-none d-flex flex-column justify-content-center align-items-center gap-1">
+          <button type="button" :class="{ active: active }" @click="$emit('activeSidebar')" class="navbar-button d-md-none d-flex flex-column justify-content-center align-items-center gap-1">
               <div class="line"></div>
               <div class="line"></div>
               <div class="line"></div>
@@ -20,7 +20,7 @@
       </div>
     </nav>
 
-    <nav class="navbar-list d-flex justify-content-center align-items-center">
+    <nav :class="{ active: active }" class="navbar-list d-flex justify-content-center align-items-center">
       <div class="list-wrapper text-center d-flex flex-column align-items-center gap-3">
         <a href="#" class="list-item">Home</a>
         <a href="#" class="list-item">About Us</a>
@@ -31,3 +31,12 @@
     </nav>
   </div>  
 </template>
+
+<script setup>
+// eslint-disable-next-line no-unused-vars, no-undef
+const props = defineProps({
+  active: Boolean,
+});
+// eslint-disable-next-line no-unused-vars, no-undef
+const emit = defineEmits(['activeSidebar'])
+</script>
