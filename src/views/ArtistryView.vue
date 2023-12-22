@@ -176,11 +176,14 @@
                 <p class="paragraph">Step into the heart of cultural discourse. Join a vibrant community of cultural enthusiasts, artists, and scholars in exploring the rich tapestry of Indonesian arts.</p>
             </div>
             <div class="col-lg-6">
-                <form class="form">
-                    <input type="text" class="input mb-2" placeholder="Username">
-                    <input type="email" class="input mb-2" placeholder="Email Address">
-                    <textarea class="input mb-3" rows="4" placeholder="Message discussion"></textarea>
-                    <button type="button" class="button-primary">Submit Message</button>
+              <div class="err-message" v-if="errMessage">
+                {{ errMessage }}
+              </div>
+                <form class="form" @submit.prevent="addTestimonial()">
+                    <input type="text" class="input mb-2" :value="user ? user.displayName : user" readonly placeholder="Username">
+                    <input type="email" class="input mb-2" :value="user ? user.email : user" readonly placeholder="Email Address">
+                    <textarea class="input mb-3" rows="4" required v-model="newTestimonial.message" placeholder="Message discussion"></textarea>
+                    <button type="submit" class="button-primary">Submit Message</button>
                 </form>
             </div>
         </div>
@@ -188,7 +191,34 @@
   </main>
 </template>
 
-<script>
+<script setup>
+import { ref, computed } from "vue"
+import { useStore } from "vuex"
+
+const store = useStore()
+
+const user = computed(() => store.state.user)
+
+const newTestimonial = ref({
+  message: '',
+})
+
+let errMessage = ref('')
+
+const addTestimonial = async () => {
+  try {
+    if(!user.value) {
+      errMessage.value = 'Please login first!'
+    } else {
+      await store.dispatch('addTestimonial', {
+        message: newTestimonial.value.message,
+      })
+      newTestimonial.value.message = ''  
+    }  
+  } catch(e) {
+    errMessage.value = 'Failed to add testimonial'  
+  }
+}
 </script>
 
 <style>

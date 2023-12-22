@@ -4,9 +4,9 @@
 // import { deleteObject, ref, uploadBytes } from 'firebase/storage'
 // import moment from 'moment/moment'
 
-import { auth } from '../firebase/config'
+import { auth,db } from '../firebase/config'
 import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
-
+import { addDoc, collection } from 'firebase/firestore'
 import { createStore } from 'vuex'
 
 const store = createStore({
@@ -98,26 +98,16 @@ const store = createStore({
     //   blog.value.title = blogContent.data().title
     //   blog.value.content = blogContent.data().content
     // },
-    // async addBlog(context, { title, content, thumbnail}) {
-    //   try {        
-    //     const filename = thumbnail.files[0].name
-    //     const storageRef = ref(storage, `blogs/${filename}`);        
-
-    //     uploadBytes(storageRef, thumbnail.files[0]).then((snapshot) => {          
-    //       console.log('Uploaded a blob or file! ' + snapshot);
-    //     });
-
-    //     const docRef = await addDoc(collection(db, "blogs"), {
-    //       title,
-    //       content,
-    //       thumbnail: filename,
-    //       created_at: new Date()
-    //     });
-    //     console.log("Document written with ID: ", docRef.id);
-    //   } catch (e) {
-    //     console.error("Error adding document: ", e);
-    //   }
-    // },
+    async addTestimonial(context, { message }) {
+      try {                
+        const docRef = await addDoc(collection(db, "testimonial"), {
+          message
+        });
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    },
     // async updateBlog(context, { id, title, content}) {
     //   try {
     //     const docRef = await updateDoc(doc(db, "blogs", id), {
