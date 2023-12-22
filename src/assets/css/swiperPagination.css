@@ -17,7 +17,6 @@
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
-
 }
 .swiper-pagination {
     position: relative;
@@ -25,6 +24,12 @@
     transition: 300ms opacity;
     transform: translate3d(0, 0, 0);
     z-index: 10;
+    margin-top: 34px !important;
+}
+
+.detail-category .swiper-pagination {
+    margin-top: 42px !important;
+    position: relative;
 }
 .swiper-pagination.swiper-pagination-hidden {
     opacity: 0;

@@ -26,7 +26,7 @@
     }),
     setup() {
       return {
-        modules: [Autoplay, Pagination],        
+        modules: [Autoplay, Pagination],
       };
     },
   };
@@ -136,27 +136,30 @@
         </div>
         <div class="row gap-row">
             <div class="">
-                  <swiper 
-                    class=""
-                    :slides-per-view=1
-                    :space-between=10
-                    :modules="modules"
-                    :loop="true"
+                    <swiper 
+                    class="position-relative"
+                    :slides-per-view="1"
+                    :space-between="10"
+                    :loop=true
                     :autoplay="{
-                      delay: 5000,
-                      disableOnInteraction: false,
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }"
+                    :modules="modules"
+                    :pagination="{
+                    clickable:true
                     }"
                     :breakpoints="{
-                      768: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
+                        768: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
                         },
                         1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 10,
+                        slidesPerView: 3,
+                        spaceBetween: 10,
                         },
                     }"
-                  >                    
+                    >
                     <swiper-slide>
                         <a href="/categories-artistry/performing-arts-heritage" class="category-item">
                             <img src="../assets/images/thumbnail-categories/thumbnail-category-1.svg" alt="Thumbnail Category" class="img-fluid w-100">

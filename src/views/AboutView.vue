@@ -1,13 +1,11 @@
 <script>
-//   Import Swiper Vue.js components
+  // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
 
-//   Import Swiper styles
+  // Import Swiper styles
   import 'swiper/css';
 
-  import 'swiper/css/pagination';
-
-//   import required modules
+  // import required modules
   import { Autoplay, Pagination } from 'swiper/modules';
 
 //   import Lightgallery from 'lightgallery/vue';
@@ -67,7 +65,15 @@
                 class="position-relative"
                 :slides-per-view="1"
                 :space-between="10"
+                :loop=true
+                :autoplay="{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }"
                 :modules="modules"
+                :pagination="{
+                    clickable:true
+                }"
                 :breakpoints="{
                   768: {
                     slidesPerView: 2,
@@ -79,26 +85,26 @@
                   },
                 }"
               >
-                <swiper-slide class="swiper-slide p-1">
-                    <button type="button" class="award-item" data-bs-toggle="modal" data-bs-target="#modalAward1">
+                <swiper-slide class="swiper-slide p-1 m-0">
+                    <button type="button" class="award-item w-100" data-bs-toggle="modal" data-bs-target="#modalAward1">
                         <img src="../assets/images/awards/award-1.svg" alt="Thumbnail Award" class="img-fluid w-100">
                         <h6>Cultural Heritage Preservation Award</h6>
                     </button>
                 </swiper-slide>
-                <swiper-slide class="swiper-slide p-1">
-                    <button type="button" class="award-item" data-bs-toggle="modal" data-bs-target="#modalAward2">
+                <swiper-slide class="swiper-slide p-1 m-0">
+                    <button type="button" class="award-item w-100" data-bs-toggle="modal" data-bs-target="#modalAward2">
                         <img src="../assets/images/awards/award-2.svg" alt="Thumbnail Award" class="img-fluid w-100">
                         <h6>Innovation in Arts Platform</h6>
                     </button>
                 </swiper-slide>
-                <swiper-slide class="swiper-slide p-1">
-                    <button type="button" class="award-item" data-bs-toggle="modal" data-bs-target="#modalAward3">
+                <swiper-slide class="swiper-slide p-1 m-0">
+                    <button type="button" class="award-item w-100" data-bs-toggle="modal" data-bs-target="#modalAward3">
                         <img src="../assets/images/awards/award-3.svg" alt="Thumbnail Award" class="img-fluid w-100">
                         <h6>Community Impact Award</h6>
                     </button>
                 </swiper-slide>
-                <swiper-slide class="swiper-slide p-1">
-                    <button type="button" class="award-item" data-bs-toggle="modal" data-bs-target="#modalAward4">
+                <swiper-slide class="swiper-slide p-1 m-0">
+                    <button type="button" class="award-item w-100" data-bs-toggle="modal" data-bs-target="#modalAward4">
                         <img src="../assets/images/awards/award-4.svg" alt="Thumbnail Award" class="img-fluid w-100">
                         <h6>Global Arts Ambassador</h6>
                     </button>
@@ -108,7 +114,7 @@
         </div>
     </section>
 
-    <section class="team gap-section pt-4" id="team">
+    <section class="team gap-section" id="team">
         <div class="row align-items-end justify-content-between">
             <div class="col-lg-6">
                 <h3 class="title">Harmony of Expertise Meet the ArtistryIndo Maestros</h3>
@@ -123,11 +129,14 @@
                     class="position-relative"
                     :slides-per-view="1"
                     :space-between="10"
-                    :modules="modules"
-                    :loop="true"
+                    :loop=true
                     :autoplay="{
-                      delay: 5000,
-                      disableOnInteraction: false,
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }"
+                    :modules="modules"
+                    :pagination="{
+                        clickable:true
                     }"
                     :breakpoints="{
                       768: {
@@ -181,7 +190,7 @@
         </div>
     </section>
 
-    <section class="mission d-flex align-items-center gap-section pt-4" id="mission">
+    <section class="mission d-flex align-items-center gap-section" id="mission">
         <div class="row align-items-center">
             <div class="col">
                 <h3 class="title">ArtistryIndo's Cultural Odyssey Unveiling Our Mission in Indonesian Arts</h3>

@@ -81,11 +81,14 @@
                         class="position-relative"
                         :slides-per-view="1"
                         :space-between="20"
-                        :modules="modules"
-                        :loop="true"
+                        :loop=true
                         :autoplay="{
                             delay: 5000,
                             disableOnInteraction: false,
+                        }"
+                        :modules="modules"
+                        :pagination="{
+                            clickable:true
                         }"
                         :breakpoints="{
                             768: {
