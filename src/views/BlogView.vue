@@ -1,6 +1,24 @@
 <script>
   import 'swiper/css';
   import 'swiper/css/pagination';
+  // import {Swiper, SwiperSlide} from "swiper/vue";
+  // import {Autoplay, Pagination} from "swiper/modules";
+  export default {
+    // components: {
+    //   Swiper,
+    //   SwiperSlide,
+    //   //   Lightgallery
+    // },
+    // data: () => ({
+    //   // plugins: [lgThumbnail, lgZoom],
+    //   isActive: true
+    // }),
+    // setup() {
+    //   return {
+    //     modules: [Autoplay, Pagination],
+    //   };
+    // },
+  };
 </script>
 
 <template>
