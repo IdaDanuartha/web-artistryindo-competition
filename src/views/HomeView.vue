@@ -302,45 +302,25 @@
             </div>
         </div>
         <div class="gap-row row-gallery">
-            <a href="../assets/images/galleries/gallery-1.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-1.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-1.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-            <a href="../assets/images/galleries/gallery-3.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-3.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-3.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-            <a href="../assets/images/galleries/gallery-6.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-6.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-6.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-            <a href="../assets/images/galleries/gallery-9.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-9.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-9.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-                <a href="../assets/images/galleries/gallery-2.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-2.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-2.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-                <a href="../assets/images/galleries/gallery-4.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-4.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-4.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-                <a href="../assets/images/galleries/gallery-5.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-5.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-5.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-                <a href="../assets/images/galleries/gallery-7.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-7.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-7.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-                <a href="../assets/images/galleries/gallery-8.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-8.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-8.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
 
-            <a href="../assets/images/galleries/gallery-10.svg" class="w-100">
-                <img src="../assets/images/galleries/gallery-10.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
-            </a>
+            <img src="../assets/images/galleries/gallery-10.svg" alt="Image Gallery" class="img-fluid w-100 image-gallery">
         </div>
     </section>
 
