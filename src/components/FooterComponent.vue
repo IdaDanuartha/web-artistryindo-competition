@@ -20,19 +20,19 @@
             <div class="col-6 col-md-3 col-lg-2 offset-xl-1">
                 <h6 class="footer-title">Quick Link</h6>
                 <div class="footer-link d-flex flex-column gap-2">
-                    <a href="#" class="link-item">Home</a>
-                    <a href="#" class="link-item">About Us</a>
-                    <a href="#" class="link-item">Category Artistry</a>
-                    <a href="#" class="link-item">Blog</a>
+                    <a href="/" class="link-item">Home</a>
+                    <a href="/about" class="link-item">About Us</a>
+                    <a href="/categories-artistry" class="link-item">Category Artistry</a>
+                    <a href="/blogs" class="link-item">Blog</a>
                 </div>
             </div>
             <div class="col-6 col-md-3 col-lg-2">
                 <h6 class="footer-title">Home</h6>
                 <div class="footer-link d-flex flex-column gap-2">
-                    <a href="#service" class="link-item">Our Service</a>
-                    <a href="#showcase" class="link-item">Artistry Highlight</a>
-                    <a href="#gallery" class="link-item">Gallery Documentation</a>
-                    <a href="#testimonial" class="link-item">Testimonial</a>
+                    <a href="/#service" class="link-item">Our Service</a>
+                    <a href="/#showcase" class="link-item">Artistry Highlight</a>
+                    <a href="/#gallery" class="link-item">Gallery Documentation</a>
+                    <a href="/#testimonial" class="link-item">Testimonial</a>
                 </div>
             </div>
             <div class="col-6 col-md-3 col-xl-2 mt-5 mt-md-0">
@@ -47,9 +47,9 @@
             <div class="col-6 col-md-3 col-lg-2 mt-5 mt-md-0">
                 <h6 class="footer-title">Help & Guide</h6>
                 <div class="footer-link d-flex flex-column gap-2">
-                    <a href="#service" class="link-item">Terms & Conditions</a>
-                    <a href="#service" class="link-item">Privacy Policy</a>
-                    <a href="#service" class="link-item">Contact Us</a>
+                    <a href="" class="link-item">Terms & Conditions</a>
+                    <a href="" class="link-item">Privacy Policy</a>
+                    <a href="" class="link-item">Contact Us</a>
                 </div>
             </div>
         </div>
