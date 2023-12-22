@@ -5,7 +5,7 @@
 
 <template>
   <div>
-    <main class="container category">
+    <main class="container detail-category">
     <section class="hero">
         <div class="row justify-content-md-center">
             <div class="col-lg-10 col-xxl-8 d-flex flex-column align-items-md-center text-md-center">
