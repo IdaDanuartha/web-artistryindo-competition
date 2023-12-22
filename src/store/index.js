@@ -1,13 +1,8 @@
-// import { auth, db, storage } from '../firebase/config'
-// import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
-// import { addDoc, collection, deleteDoc, doc, getDoc, onSnapshot, updateDoc } from 'firebase/firestore'
-// import { deleteObject, ref, uploadBytes } from 'firebase/storage'
-// import moment from 'moment/moment'
-
 import { auth,db } from '../firebase/config'
 import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
-import { addDoc, collection, query, where, getDocs, onSnapshot } from 'firebase/firestore'
+import { addDoc, collection, query, where, getDocs, onSnapshot, orderBy } from 'firebase/firestore'
 import { createStore } from 'vuex'
+import moment from 'moment/moment'
 
 const store = createStore({
   state: {
@@ -75,14 +70,19 @@ const store = createStore({
       }
     },
     getTestimonials(context, testimonial) {
-      onSnapshot(collection(db, "testimonials"), (querySnapshot) => {
+      onSnapshot(
+        query(
+          collection(db, 'testimonials'),
+          orderBy('created_at', 'desc')          
+        ), (querySnapshot) => {
         const fbTestimonial = []
         querySnapshot.forEach((doc) => {
           console.log(doc.data().created_at)
           const blog = {
             id: doc.id,
             username: doc.data().username,         
-            message: doc.data().message,         
+            message: doc.data().message,      
+            created_at: moment(doc.data().created_at.toDate(), 'x').format('D MMM Y')   
           }
           fbTestimonial.push(blog)
         });
@@ -101,7 +101,8 @@ const store = createStore({
         }      
         await addDoc(collection(db, "testimonials"), {
           message,
-          username
+          username,
+          created_at: new Date()
         });        
       } catch (err) {
         console.error("Error adding document: ", err);
