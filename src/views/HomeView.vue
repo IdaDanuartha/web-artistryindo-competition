@@ -125,7 +125,7 @@
         </div>
     </section>
 
-    <section class="service gap-section pt-4" id="service">
+    <section class="service gap-section" id="service">
         <div class="row align-items-end justify-content-between">
             <div class="col-lg-6">
                 <h3 class="title">ArtistryIndo Services, Elevating Indonesian Arts Experience</h3>
@@ -238,7 +238,7 @@
         </div>
     </section>
 
-    <section class="about d-flex align-items-center gap-section pt-4" id="about">
+    <section class="about d-flex align-items-center gap-section" id="about">
         <div class="row align-items-center">
             <div class="col-lg-5 col-xxl-6 d-none d-lg-flex">
                 <img src="../assets/images/banners/banner-about.svg" alt="Banner About" class="img-fluid banner-image">
@@ -475,7 +475,7 @@
         </div>
     </section>
 
-    <section class="blog gap-section pt-4" id="blog">
+    <section class="blog gap-section" id="blog">
         <div class="row align-items-end justify-content-between">
             <div class="col-lg-6">
                 <h3 class="title">Exploring Blog the Heartbeat of Indonesian Arts</h3>
