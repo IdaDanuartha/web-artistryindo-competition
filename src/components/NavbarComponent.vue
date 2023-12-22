@@ -8,7 +8,7 @@
               </a>
               <a href="/" class="link-item d-none d-md-inline-block">Home</a>
               <a href="/about" class="link-item d-none d-md-inline-block">About</a>
-              <a href="/categories" class="link-item d-none d-md-inline-block">Category</a>
+              <a href="/categories-artistry" class="link-item d-none d-md-inline-block">Category</a>
               <a href="/blogs" class="link-item d-none d-md-inline-block">Blog</a>
           </div>
           <button type="button" :class="{ active: active }" @click="$emit('activeSidebar')" class="navbar-button d-md-none d-flex flex-column justify-content-center align-items-center gap-1">
@@ -17,7 +17,7 @@
               <div class="line"></div>
           </button>
           <div class="wrapper d-none d-md-flex gap-2">
-            <a href="/categories" class="button-primary-small">Explore Now</a>
+            <a href="/categories-artistry" class="button-primary-small">Explore Now</a>
             <button v-if="!user" type="button" data-bs-toggle="modal" data-bs-target="#modalLogin" class="button-reverse-small">Login Account</button>
             <button v-if="user" type="button" @click="handleLogout()" class="button-reverse-small">Logout Account</button>
           </div>
@@ -28,9 +28,9 @@
       <div class="list-wrapper text-center d-flex flex-column align-items-center gap-3">
         <a href="/" class="list-item">Home</a>
         <a href="/about" class="list-item">About Us</a>
-        <a href="/categories" class="list-item">Category Art</a>
+        <a href="/categories-artistry" class="list-item">Category Art</a>
         <a href="/blogs" class="list-item">Blog ArtistryIndo</a>
-        <a href="/categories" class="button-primary mt-3 w-100">Explore Now</a>
+        <a href="/categories-artistry" class="button-primary mt-3 w-100">Explore Now</a>
         <button v-if="!user" type="button" data-bs-toggle="modal" data-bs-target="#modalLogin" class="button-reverse w-100">Login Account</button>
         <button v-if="user" type="button" @click="handleLogout()" class="button-reverse w-100">Logout Account</button>
       </div>
