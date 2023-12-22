@@ -6,10 +6,10 @@
               <a href="#">
                   <img src="../assets/images/brand/logo-brand.svg" alt="Logo Brand" class="img-fluid" width="56">
               </a>
-              <a href="/" class="link-item d-none d-md-inline-block">Home</a>
-              <a href="/about" class="link-item d-none d-md-inline-block">About</a>
-              <a href="/categories-artistry" class="link-item d-none d-md-inline-block">Category</a>
-              <a href="/blogs" class="link-item d-none d-md-inline-block">Blog</a>
+              <router-link :to="{name:'home'}" active-class="active" class="link-item d-none d-md-inline-block">Home</router-link>
+              <router-link :to="{name:'about'}" active-class="active" class="link-item d-none d-md-inline-block">About</router-link>
+              <router-link :to="{name:'categories-artistry'}" active-class="active" class="link-item d-none d-md-inline-block">Category</router-link>
+              <router-link :to="{name:'blogs'}" active-class="active" class="link-item d-none d-md-inline-block">Blog</router-link>
           </div>
           <button type="button" :class="{ active: active }" @click="$emit('activeSidebar')" class="navbar-button d-md-none d-flex flex-column justify-content-center align-items-center gap-1">
               <div class="line"></div>
