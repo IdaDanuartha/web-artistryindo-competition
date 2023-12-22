@@ -4,8 +4,6 @@ const ButtonHistory = document.querySelector('.button-history');
 const Paragraph1 = document.querySelector('.paragraph-1');
 const Paragraph2 = document.querySelector('.paragraph-2');
 
-console.log(ButtonDefinition)
-
 ButtonDefinition.addEventListener('click', function() {
     ButtonVission.classList.remove('active');
     ButtonHistory.classList.remove('active');

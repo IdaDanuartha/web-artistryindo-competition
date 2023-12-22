@@ -624,7 +624,6 @@
             </div>
         </div>
     </div>
-
     <!-- END MODAL -->
 </main>
 </template>
