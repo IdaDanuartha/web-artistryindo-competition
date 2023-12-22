@@ -7,8 +7,8 @@
                 <div class="wrapper d-flex justify-content-between align-items-center w-100">
                     <p class="date">Published on February 5, 2023</p>
                     <div class="link-wrapper d-flex">
-                        <a href="#" target="_blank" class="link-sosmed">Instagram</a>
-                        <a href="#" target="_blank" class="link-sosmed">Facebook</a>
+                        <a href="https://www.instagram.com/" target="_blank" class="link-sosmed">Instagram</a>
+                        <a href="https://www.facebook.com/" target="_blank" class="link-sosmed">Facebook</a>
                     </div>
                 </div>
                 <img src="../assets/images/thumbnail-performings/thumbnail-performing-1.svg" alt="Blog Image" class="img-fluid w-100">
