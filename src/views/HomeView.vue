@@ -5,7 +5,9 @@
   // Import Swiper styles
   import 'swiper/css';
 
-  import 'swiper/css/pagination';
+
+
+
 
   // import required modules
   import { Autoplay, Pagination } from 'swiper/modules';
@@ -67,6 +69,9 @@
                 :slides-per-view="1"
                 :space-between="10"
                 :modules="modules"
+                :pagination="{
+                  clickable:true
+                }"
                 :breakpoints="{
                     768: {
                     slidesPerView: 2,

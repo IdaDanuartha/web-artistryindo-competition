@@ -22,4 +22,5 @@ const activeSidebar = () => {
 <style>
 /* @import '/src/assets/css/bootstrap.min.css'; */
 @import '/src/assets/css/style.css';
+@import '../assets/css/swiperPagination.css';
 </style>
