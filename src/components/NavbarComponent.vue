@@ -20,7 +20,7 @@
             <a href="/categories" class="button-primary-small">Explore Now</a>
             <button v-if="!user" type="button" data-bs-toggle="modal" data-bs-target="#modalLogin" class="button-reverse-small">Login Account</button>
             <button v-if="user" type="button" @click="handleLogout()" class="button-reverse-small">Logout Account</button>
-          </div>  
+          </div>
       </div>
     </nav>
 
