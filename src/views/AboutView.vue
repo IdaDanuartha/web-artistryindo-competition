@@ -114,7 +114,7 @@
         </div>
     </section>
 
-    <section class="team gap-section pt-4" id="team">
+    <section class="team gap-section" id="team">
         <div class="row align-items-end justify-content-between">
             <div class="col-lg-6">
                 <h3 class="title">Harmony of Expertise Meet the ArtistryIndo Maestros</h3>
@@ -190,7 +190,7 @@
         </div>
     </section>
 
-    <section class="mission d-flex align-items-center gap-section pt-4" id="mission">
+    <section class="mission d-flex align-items-center gap-section" id="mission">
         <div class="row align-items-center">
             <div class="col">
                 <h3 class="title">ArtistryIndo's Cultural Odyssey Unveiling Our Mission in Indonesian Arts</h3>
