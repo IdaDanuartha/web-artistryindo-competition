@@ -67,56 +67,56 @@
     <section class="category" id="category">
         <div class="row">
             <div class="col-md-6 col-lg-3">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-1.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Kecak Dance, Bali</h6>
                     <p class="card-caption">Mesmerizing cultural spectacle known for its rhythmic chanting and intricate choreography.</p>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4 mt-md-0">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-2.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Barong Dance, Gianyar, Bali</h6>
                     <p class="card-caption">Performed in Gianyar, Bali, is a captivating portrayal of the eternal battle.</p>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-3.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Ramayana Performance, Prambanan</h6>
                     <p class="card-caption">Mesmerizing cultural spectacle set against the backdrop of the majestic Prambanan Temple ...</p>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-4.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Martial arts</h6>
                     <p class="card-caption">Martial arts, an ancient practice with roots in various cultures, is a disciplined and dynamic ...</p>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-5.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Reog Ponorogo, East Java</h6>
                     <p class="card-caption">Reog Ponorogo, originating from East Java, is a vibrant and captivating traditional Indonesian ...</p>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-6.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Saman Dance, Aceh</h6>
                     <p class="card-caption">The Saman Dance from Aceh, Indonesia, is a remarkable cultural expression characterized ...</p>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-7.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Plate Dance, West Sumatra</h6>
                     <p class="card-caption">Tari Piring, originating from Sumatra Barat (West Sumatra), is a traditional Indonesian da ...</p>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 mt-4">
-                <a href="/categories-artistry/performing-arts-heritage" class="card-category">
+                <a href="/artistry/kecak-dance" class="card-category">
                     <img src="../assets/images/thumbnail-performings/thumbnail-performing-8.svg" alt="Thumbnail Image" class="img-fluid w-100">
                     <h6 class="card-title">Wayang Orang, Java</h6>
                     <p class="card-caption">Explore the classical Javanese dance drama of Wayang Orang, where performers bring to lif ...</p>
@@ -161,37 +161,37 @@
                     }"
                     >
                     <swiper-slide>
-                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                        <a href="/artistry/kecak-dance" class="category-item">
                             <img src="../assets/images/thumbnail-categories/thumbnail-category-1.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Performing Arts Heritage</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                        <a href="/artistry/kecak-dance" class="category-item">
                             <img src="../assets/images/thumbnail-categories/thumbnail-category-2.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Musical Arts Heritage</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                        <a href="/artistry/kecak-dance" class="category-item">
                             <img src="../assets/images/thumbnail-categories/thumbnail-category-3.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Traditional Fine Arts</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                        <a href="/artistry/kecak-dance" class="category-item">
                             <img src="../assets/images/thumbnail-categories/thumbnail-category-4.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Indonesian Literature and Folklore</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                        <a href="/artistry/kecak-dance" class="category-item">
                             <img src="../assets/images/thumbnail-categories/thumbnail-category-5.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Traditional Culinary Delights</h6>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="/categories-artistry/performing-arts-heritage" class="category-item">
+                        <a href="/artistry/kecak-dance" class="category-item">
                             <img src="../assets/images/thumbnail-categories/thumbnail-category-6.svg" alt="Thumbnail Category" class="img-fluid w-100">
                             <h6>Aksara and Literature</h6>
                         </a>
