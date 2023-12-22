@@ -6,7 +6,7 @@
 
 import { auth,db } from '../firebase/config'
 import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, query, where, getDocs, onSnapshot } from 'firebase/firestore'
 import { createStore } from 'vuex'
 
 const store = createStore({
@@ -74,70 +74,40 @@ const store = createStore({
         context.commit("setUser", null);
       }
     },
-    // getBlogs(context, blogs) {
-    //   onSnapshot(collection(db, "blogs"), (querySnapshot) => {
-    //     const fbBlogs = []
-    //     querySnapshot.forEach((doc) => {
-    //       console.log(doc.data().created_at)
-    //       const blog = {
-    //         id: doc.id,
-    //         title: doc.data().title,
-    //         content: doc.data().content,
-    //         thumbnail: doc.data().thumbnail,
-    //         is_vote: doc.data().is_vote,
-    //         created_at: moment(doc.data().created_at.toDate(), 'x').format('D MMM Y')
-    //       }
-    //       fbBlogs.push(blog)
-    //     });
-    //     blogs.value = fbBlogs
-    //   });
-    // },
-    // async getBlog(context, {id, blog}) {
-    //   const blogContent = await getDoc(doc(db, "blogs", id));
-
-    //   blog.value.title = blogContent.data().title
-    //   blog.value.content = blogContent.data().content
-    // },
-    async addTestimonial(context, { message }) {
-      try {                
-        const docRef = await addDoc(collection(db, "testimonial"), {
-          message
+    getTestimonials(context, testimonial) {
+      onSnapshot(collection(db, "testimonials"), (querySnapshot) => {
+        const fbTestimonial = []
+        querySnapshot.forEach((doc) => {
+          console.log(doc.data().created_at)
+          const blog = {
+            id: doc.id,
+            username: doc.data().username,         
+            message: doc.data().message,         
+          }
+          fbTestimonial.push(blog)
         });
-        console.log("Document written with ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error adding document: ", e);
+        testimonial.value = fbTestimonial
+      });
+    },   
+    async addTestimonial(context, { message, username }) {
+      try {      
+        // Check if the testimonial with the same message already exists
+        const testimonialQuery = query(collection(db, 'testimonials'), where('username', '==', username));
+        const existingTestimonials = await getDocs(testimonialQuery);
+
+        if (existingTestimonials.size > 0) {
+          // Testimonial with the same message already exists, return an error
+          throw new Error('You have added a testimonial');
+        }      
+        await addDoc(collection(db, "testimonials"), {
+          message,
+          username
+        });        
+      } catch (err) {
+        console.error("Error adding document: ", err);
+        throw err
       }
     },
-    // async updateBlog(context, { id, title, content}) {
-    //   try {
-    //     const docRef = await updateDoc(doc(db, "blogs", id), {
-    //       title,
-    //       content,
-    //     });
-    //     console.log("Document updated with ID: ", docRef.id);
-    //   } catch (e) {
-    //     console.error("Error updating document: ", e);
-    //   }
-    // },
-    // async deleteBlog(context, {id, filename}) {
-    //   try {
-    //     // Create a reference to the file to delete
-    //     const storageRef = ref(storage, `blogs/${filename}`);        
-
-    //     // Delete the file
-    //     deleteObject(storageRef).then(() => {
-    //       console.log("file deleted successfully")
-    //     }).catch((error) => {          
-    //       console.log(error)
-    //     });
-
-    //     await deleteDoc(doc(db, "blogs", id));
-
-    //     console.log("Document written with ID: ", id);
-    //   } catch (e) {
-    //     console.error("Error adding document: ", e);
-    //   }
-    // }
   },
 })
 
